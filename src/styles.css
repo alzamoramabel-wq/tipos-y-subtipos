@@ -402,17 +402,16 @@ input[type="checkbox"]:disabled:checked {
   animation: siaf-snackbar-out 300ms ease-in both;
 }
 
-/* ── Animación de modales (Figma WEB-SIAF-RP) ──
-   Abre: el diálogo entra desde arriba hacia el centro (Move in ↓,
-   ease-out 300ms); el overlay hace fade. Cierra: el reverso hacia
-   arriba (ease-in-out 300ms). */
+/* ── Animación de modales ──
+   Aparecen con un disolver suave: el diálogo y su fondo hacen fade-in
+   (ease-out 300ms) y al cerrar, fade-out (ease-in-out 300ms). Sin movimiento. */
 @keyframes siaf-modal-in {
-  from { transform: translateY(calc(-50vh - 100%)); }
-  to { transform: translateY(0); }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 @keyframes siaf-modal-out {
-  from { transform: translateY(0); }
-  to { transform: translateY(calc(-50vh - 100%)); }
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 .siaf-modal-overlay {

@@ -372,7 +372,7 @@ export class ModalComponent implements OnChanges {
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {}
 
-  /** Render animado del modal (entra desde arriba, sale en reverso). */
+  /** Render animado del modal (aparece y se va con un disolver suave). */
   readonly anim = new SidePanelAnimacion();
 
   ngOnChanges(changes: SimpleChanges): void {
